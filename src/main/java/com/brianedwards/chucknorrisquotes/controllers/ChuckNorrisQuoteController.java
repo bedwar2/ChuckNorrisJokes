@@ -18,6 +18,7 @@ public class ChuckNorrisQuoteController {
     @RequestMapping("/")
     public String getQuote(Model model) {
         model.addAttribute("quote", this.quoteService.getCNJoke());
+        model.addAttribute("totalJokes", this.quoteService.getTotalNumberOfJokes());
         return "chuckQuote";
     }
 
